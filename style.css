@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	font-family: monospace;
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+.wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.rotateAnim {
+	animation: animRot 3000ms linear infinite;
+}
+
+@keyframes animRot {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.hide {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: 450ms;
+	-o-transition: 450ms;
+	transition: 450ms;
+}
+
+.points-over {
+	position: relative;
+	text-align: center;
+	font-size: 24px;
+	margin: 0;
+	margin-top: 20px;
+}
+
+.container {
+	border: 2px solid #af8;
+	max-width: 920px;
+	width: 100%;
+	height: 90vh;
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+.disabled-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #959595;
+	height: 100%;
+}
+
+#timer {
+	position: relative;
+	display: block;
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	outline: none;
+	border: none;
+	background-color: #222;
+	color: #af8;
+}
+
+#timer::placeholder {
+	color: #af9;
+}
+
+#btn {
+	position: relative;
+	font-size: 17px;
+	z-index: 2;
+	cursor: pointer;
+	font-family: monospace;
+	font-weight: 700;
+	letter-spacing: -0.1px;
+	border: none;
+	background-color: #fea100;
+	border-radius: 4px;
+	padding: 10px 20px;
+	outline: none;
+	-webkit-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+#btn:hover {
+	background-color: #da8100;
+}
+
+
+.points {
+	font-family: monospace;
+	color: #fff;
+	font-weight: 900;
+	position: absolute;
+	font-size: 20px;
+	margin: 0;
+	top: -30px;
+	left: 0%;
+	z-index: 5;
+}
+
+
+.time-game {	font-family: monospace;
+	color: #fff;
+	font-weight: 900;
+	position: absolute;
+	font-size: 20px;
+	margin: 0;
+	top: -30px;
+	z-index: 5;
+	right: 0%;
+}
