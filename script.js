@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', e => {
 	let pts = 0;
 	let time = 0;
+	let i = 0;
 	let btn = document.getElementById('btn');
 	let container = document.querySelector('.container');
 	let gameArea = document.querySelector('.gameArea');
@@ -59,6 +60,24 @@ document.addEventListener('DOMContentLoaded', e => {
 			div.style.position = 'absolute';
 			div.style.left = gamePositionLeft + 'px';
 			div.style.top = gamePositionTop + 'px';
+
+			let a = setInterval(() => {
+
+				if ((parseInt(div.style.top) < gameProperties.height - parseInt(div.style.height) - 7 && parseInt(div.style.left) < gameProperties.width - parseInt(div.style.width) - 7)) {
+					i++;
+				div.style.left = i + gamePositionLeft + 'px';
+				div.style.top = i + gamePositionTop + 'px';
+
+							}
+
+							 else {
+								clearInterval(a);
+							}
+
+			}, 10)
+
+
+
 			div.style.background = `url(${randomNum(1, 3)}.jpg) center/cover no-repeat`
 			div.style.borderRadius = '50%';
 			div.style.cursor = `url("hand.cur"), text`
@@ -69,6 +88,7 @@ document.addEventListener('DOMContentLoaded', e => {
 				generateRect();
 				pts++;
 				document.querySelector('.points span').innerHTML = `${pts}`
+				i = 0;
 			}
 
 		}
