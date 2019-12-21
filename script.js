@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 	function start(e) {
 
-
+		i = 0;
 		document.querySelector('.sost').classList.add('hide');
 		time = parseFloat(document.querySelector('#timer').value);
 		document.querySelector('#timer').value = ''
